@@ -14,14 +14,21 @@ View(trabalho)
 #############################################################################
 #1- Construa boxplots representando o número de filhos ate cinco anos para as
 #mulheres que trabalham e outro para as que não trabalham. Qual a sua interpretacao sobre o grafico? 
-questao_1 <- subset(trabalho, ID_TRABALHA == 1 & FILHOS_5 > 1 , select = c(ID_TRABALHA, FILHOS_5 ))
+questao_1 <- subset(trabalho, ID_TRABALHA == 1  , select = c(ID_TRABALHA, FILHOS_5 ))
 View(questao_1)
+trabalha_1 <- sum(questao_1$FILHOS_5)
+View(trabalha_1)
 
-?subset
-#EXEMPLO
-#questao8_data <- subset(rais_completo, sg_estado == "MG" & Codigo ==3, select = c(descricao, renda_mensal_total, total_empregos) )
+questao_1a <- subset(trabalho, ID_TRABALHA == 0  , select = c(ID_TRABALHA, FILHOS_5 ))
+View(questao_1a)
+trabalha_0 <- sum(questao_1a$FILHOS_5)
+View(trabalha_0)
 
-questao6 <- aggregate(cbind( trabalho$ID_TRABALHA == 1, trabalho$FILHOS_5)
-                      ,by = list(trabalho$FILHOS_5), FUN = "sum" )
-View(questao6)
+boxplot(trabalha_0 )
+boxplot(trabalha_1 )
+
+#############################################################################
+#2. Repita o item anterior para as variáveis FILHOS 6 18, IDADE e RENDA FAMILIA. Interprete os gŕaficos
+
+
 
