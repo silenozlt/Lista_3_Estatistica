@@ -36,8 +36,7 @@ boxplot(FILHOS_6_18 ~ ID_TRABALHA,data=questao_2)
 
 
 table(trabalho$ID_ENSINO_SUPERIOR,trabalho$ID_TRABALHA) 
-
-chisq.test(trabalho$ID_ENSINO_SUPERIOR,trabalho$ID_TRABALHA)
+table(trabalho$ID_TRABALHA,trabalho$ID_ENSINO_SUPERIOR)
 
 #############################################################################
 #4- Ajuste o modelo de regress̃ao linear para o conjunto de dados, considerando ID TRABALHA a variável resposta
