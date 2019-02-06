@@ -15,10 +15,7 @@ View(trabalho)
 ########################################################################################################
 #1- Construa boxplots representando o número de filhos ate cinco anos para as
 #mulheres que trabalham e outro para as que não trabalham. Qual a sua interpretacao sobre o grafico? 
-questao_1 <- subset(trabalho,  select = c(ID_TRABALHA, FILHOS_5 ))
-View(questao_1)
-
-boxplot(FILHOS_5 ~ ID_TRABALHA,data=questao_1)
+c
 
 #############################################################################
 #2. Repita o item anterior para as variáveis FILHOS 6 18, IDADE e RENDA FAMILIA. Interprete os gŕaficos
